@@ -70,7 +70,7 @@ elif choice == "h":
 {_l}
 Lock Bootloader:
 
-notice: Prior to initiating the process, ensure that the partition is clean ( If you've previously rooted your device, flash the clean boot.img Or If any modifications have been made to any partition, flash the clean partition-name.img ) to prevent any potential issues in the future
+notice: Prior to initiating the process, ensure that the partitions is clean ( If you've previously rooted your device, flash the clean boot.img Or If any modifications have been made to any partition, flash the clean partition-name.img ) to prevent any potential issues in the future
 
 Type: {c1}fastboot oem lock{c2}
 {_l}
