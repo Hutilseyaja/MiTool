@@ -2,7 +2,7 @@
 
 version = "1.5.0"
 
-import subprocess, requests, shutil, re
+import subprocess, requests, shutil, re, sys
 from os import get_terminal_size
 
 try:
@@ -52,7 +52,11 @@ print(f"""
 
 """)
 
-choice = input(f'Enter your {c1}choice{c2}: ')
+if len(sys.argv) > 1:
+    choice = sys.argv[1]
+    print(choice)
+else:
+    choice = input(f'Enter your {c1}choice{c2}: ')
 
 if choice == "1":
     subprocess.run("$PREFIX/bin/miunlock", shell=True)
