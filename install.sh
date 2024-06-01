@@ -49,5 +49,11 @@ curl "https://raw.githubusercontent.com/offici5l/MiUnlockTool/master/MiUnlockToo
 echo -e "\033[32mupdate MiBypassTool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiBypassTool/master/MiBypassTool.py" -o "$PREFIX/bin/mibypass" && chmod +x "$PREFIX/bin/mibypass"
 
+echo -e "\033[32mupdate MiAssistantTool...\033[0m"
+
+curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miasst" -o "$PREFIX/bin/miasst" && chmod +x "$PREFIX/bin/miasst"
+
+curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/MiAssistantTool.py" -o "$PREFIX/bin/p_miasst" && chmod +x "$PREFIX/bin/p_miasst"
+
 echo -e "\n\e[34mChangelog: https://github.com/offici5l/MiTool/blob/main/Show-Version-History.md\e[0m\n"
 printf "use command: \e[1;32mmitool\e[0m\n"
