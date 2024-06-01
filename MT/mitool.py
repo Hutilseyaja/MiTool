@@ -35,7 +35,7 @@ ver = f"MiTool {version}"
 b = '━' * (len(ver) + 4)
 p = ' ' * ((get_terminal_size().columns - len(b)) // 2)
 furl = f"\n{p}┏{b}┓\n{p}┃  {ver}  ┃\n{p}┗{b}┛"
-print(furl + f" ━ {c1}h{c2}elp")
+print(furl + f" ━ {c1}help{c2}")
 
 
 print(f"""
@@ -49,6 +49,7 @@ print(f"""
 
 ━ {c1}4{c2} Bypass
 
+━ {c1}5{c2} Mi-Assistant
 
 """)
 
@@ -69,7 +70,8 @@ elif choice == "4":
 elif choice == "u":
     subprocess.run("curl https://raw.githubusercontent.com/offici5l/MiTool/master/install.sh | bash", shell=True)
     exit()
-elif choice == "h":
+elif choice == "h" or choice == "help":
+    print("\033[H\033[J")
     print(f"""
 {_l}
 Lock Bootloader:
@@ -118,7 +120,12 @@ To report issues or share feedback, visit:
 - Telegram Group: t.me/Offici5l_Group
 {_l}
 """)
+elif choice == "5":
+    subprocess.run("$PREFIX/bin/p_miasst", shell=True)
 else:
     print("\nInvalid choice\n")
     exit()
+
+
+
 
