@@ -65,5 +65,8 @@ MiTool version 1.5.0 :
 
 - Various improvements.
 
+MiTool version 1.5.1 :
+
+- Add MiAssistantTool
 
 
