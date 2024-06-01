@@ -67,6 +67,10 @@ MiTool version 1.5.0 :
 
 MiTool version 1.5.1 :
 
-- Add MiAssistantTool
+- Add MiAssistantTool version 1.0
+Without unlocking the bootloader in recovery mode > Mi Assistant :
+- Read-Info
+- Check-ROM-Compatibility(With MD5)
+- Flash-Official-Recovery-ROM
 
 
