@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/MiTool-orange" alt="MiTool" width="200" height="70">
+<img src="https://img.shields.io/badge/MiTool-orange" alt="MiTool" width="150" height="50">
 
 ### compatible with Android(Termux)
 
