@@ -1,6 +1,6 @@
 <div align="center">
 
-<span style="font-size: 80px; color: #FF6719; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">MiTool</span>
+<span style="font-size: 36px; color: #FF6719; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">MiTool</span>
 
 ### compatible with Android(Termux)
 
