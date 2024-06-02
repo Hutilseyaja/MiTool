@@ -14,6 +14,7 @@ print(f"""
 \n━ {c1}1{c2} Read-Info\n
 \n━ {c1}2{c2} Check-ROM-Compatibility(With MD5)\n
 \n━ {c1}3{c2} Flash-Official-Recovery-ROM\n
+\n━ {c1}4{c2} Format-Data\n
 
 """)
     
@@ -25,6 +26,8 @@ elif choice == "2":
     choice_s = "checkrom"
 elif choice == "3":
     choice_s = "flash"
+elif choice == "4":
+    choice_s = "format"
 else:
    print("\nInvalid choice\n")
    exit()
@@ -57,4 +60,6 @@ elif choice_s == "checkrom":
     subprocess.run(["termux-usb", "-E", "-e", "miasst checkrom", "-r", device_path])
 elif choice_s == "flash":
     subprocess.run(["termux-usb", "-E", "-e", "miasst", "-r", device_path])
+elif choice_s == "format":
+    subprocess.run(["termux-usb", "-E", "-e", "format", "-r", device_path])
 
