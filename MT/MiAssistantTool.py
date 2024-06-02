@@ -61,5 +61,5 @@ elif choice_s == "checkrom":
 elif choice_s == "flash":
     subprocess.run(["termux-usb", "-E", "-e", "miasst", "-r", device_path])
 elif choice_s == "format":
-    subprocess.run(["termux-usb", "-E", "-e", "format", "-r", device_path])
+    subprocess.run(["termux-usb", "-E", "-e", "miasst format", "-r", device_path])
 
