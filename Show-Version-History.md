@@ -73,4 +73,7 @@ Without unlocking the bootloader in recovery mode > Mi Assistant :
 - Check-ROM-Compatibility(With MD5)
 - Flash-Official-Recovery-ROM
 
+Update (1.5.1)
+-Add Format-Data with (Mi Assistant)
+
 
