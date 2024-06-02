@@ -2,6 +2,8 @@
 
 <h1 style="font-size: 24px; color: #FF6719; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">MiTool</h1>
 
+[![Version 1.5.1](https://img.shields.io/badge/Version-1.5.1-brightgreen)](#)
+
 ### compatible with Android(Termux)
 
 [![Telegram Channel](https://img.shields.io/badge/-telegram-red?color=white&logo=telegram&logoColor=blue)](https://t.me/Offici5l_Channel)
