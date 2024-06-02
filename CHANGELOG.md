@@ -1,3 +1,5 @@
+#
+
 MiTool version 1.4.4:
 
 - Device verification has been added in any mode, automatically restarting it to the appropriate mode
@@ -11,6 +13,7 @@ Usage: run command: mitool t
 
 - Other improvements and additions
 
+#
 
 MiTool version 1.4.5:
 
@@ -18,14 +21,12 @@ MiTool version 1.4.5:
   Now, when the browser is opened, you don't need to enter login credentials again; you only need to confirm login
 (this improvement has been canceled due to some unexpected problems.)
 
-
-
-
 - suggestions or issue reports can now be directly sent to t.me/Offici5l_Group through mitool. with command : m
 (this is especially useful for users who do not have a telegram account.)
 
 - other improvements.
 
+#
 
 MiTool version 1.4.6:
 
@@ -33,7 +34,7 @@ MiTool version 1.4.6:
 
 - Other improvements
 
-
+#
 
 MiTool version 1.4.8 :
 
@@ -43,6 +44,7 @@ MiTool version 1.4.8 :
 
 - improvements
 
+#
 
 MiTool version 1.4.9 :
 
@@ -50,6 +52,8 @@ MiTool version 1.4.9 :
 It is now expected that the securityStatus16 error will not occur. If it does happen, please report it.
 
 - Other improvements
+
+#
 
 MiTool version 1.5.0 :
 
