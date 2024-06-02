@@ -55,5 +55,5 @@ curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miasst" -o "$P
 
 curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/MiAssistantTool.py" -o "$PREFIX/bin/p_miasst" && chmod +x "$PREFIX/bin/p_miasst"
 
-echo -e "\n\e[34mChangelog: https://github.com/offici5l/MiTool/blob/main/Show-Version-History.md\e[0m\n"
+echo -e "\n\e[34mChangelog: https://github.com/offici5l/MiTool/blob/main/CHANGELOG.md\e[0m\n"
 printf "use command: \e[1;32mmitool\e[0m\n"
