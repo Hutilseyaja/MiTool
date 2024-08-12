@@ -6,12 +6,7 @@ if ! command -v pv &>/dev/null; then
 fi
 
 if ! command -v adb &>/dev/null || ! command -v fastboot &>/dev/null; then
-    yes | apt update && yes | apt upgrade
-    echo "Installing ADB and Fastboot..."
-    yes | pkg uninstall termux-adb 2>/dev/null
-    curl -s https://raw.githubusercontent.com/nohajc/termux-adb/master/install.sh | bash
-    ln -s $PREFIX/bin/termux-fastboot $PREFIX/bin/fastboot
-    ln -s $PREFIX/bin/termux-adb $PREFIX/bin/adb
+    curl https://raw.githubusercontent.com/offici5l/termux-adb-fastboot/main/install | bash
 fi
 
 if ! command -v python3 &>/dev/null; then
