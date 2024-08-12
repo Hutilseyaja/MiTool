@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-version = "1.5.1"
+version = "1.5.2"
 
 import subprocess, requests, shutil, re, sys
 from os import get_terminal_size
@@ -121,7 +121,7 @@ To report issues or share feedback, visit:
 {_l}
 """)
 elif choice == "5":
-    subprocess.run("$PREFIX/bin/p_miasst", shell=True)
+    subprocess.run("$PREFIX/bin/miasst", shell=True)
 else:
     print("\nInvalid choice\n")
     exit()

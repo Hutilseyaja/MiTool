@@ -82,4 +82,10 @@ Without unlocking the bootloader in recovery mode > Mi Assistant :
 Update (1.5.1)
 -Add Format-Data with (Mi Assistant)
 
+#
+
+MiTool version 1.5.2 :
+
+- Add MiAssistantTool for arm & aarch64 
+
 

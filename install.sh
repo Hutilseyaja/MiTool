@@ -34,6 +34,11 @@ if ! python3 -c "import requests" &>/dev/null; then
     yes | pip install requests
 fi
 
+if ! dpkg -l | grep -q libusb; then
+    echo "Installing libusb..."
+    yes | pkg install libusb
+fi
+
 echo -e "\033[32mupdate mitool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py" -o "$PREFIX/bin/mitool" && chmod +x "$PREFIX/bin/mitool"
 
@@ -50,10 +55,13 @@ echo -e "\033[32mupdate MiBypassTool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiBypassTool/master/MiBypassTool.py" -o "$PREFIX/bin/mibypass" && chmod +x "$PREFIX/bin/mibypass"
 
 echo -e "\033[32mupdate MiAssistantTool...\033[0m"
-
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miasst" -o "$PREFIX/bin/miasst" && chmod +x "$PREFIX/bin/miasst"
-
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/MiAssistantTool.py" -o "$PREFIX/bin/p_miasst" && chmod +x "$PREFIX/bin/p_miasst"
+if [ $(uname -m) == "aarch64" ]; then
+    curl -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_aarch64" | cut -d '"' -f 4)
+    chmod +x $PREFIX/bin/miasst
+else
+    curl -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_arm" | cut -d '"' -f 4)
+    chmod +x $PREFIX/bin/miasst
+fi
 
 curl -L -s https://raw.githubusercontent.com/offici5l/MiTool/main/CHANGELOG.md | tac | awk '/^#/{exit} {print "\033[0;34m" $0 "\033[0m"}' | tac
 
