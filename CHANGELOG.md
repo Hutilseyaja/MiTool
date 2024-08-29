@@ -86,6 +86,20 @@ Update (1.5.1)
 
 MiTool version 1.5.2 :
 
-- Add MiAssistantTool for arm & aarch64 
+- Add MiAssistantTool for arm & aarch64
+
+#
+
+MiTool version 1.5.3 :
+
+[
+Miunlocktool version 1.5.2:
+- Fix `"device is not recognized but termux-api popup appears !"`
+- Improvements
+]
+
+
+
+
 
 
