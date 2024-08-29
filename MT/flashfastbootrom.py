@@ -58,7 +58,7 @@ def flash_selected_result(selected_result):
                 if 1 <= choice <= len(found_files):
                     selected_file = found_files[choice - 1]
                     translated_file = translate_file_name(selected_file)
-                    [print(char, end='', flush=True) or time.sleep(0.01) for char in "\nEnsure you're in Bootloader mode\n\n"]
+                    [print(char, end='', flush=True) or time.sleep(0.01) for char in "\nEnsure you're in Fastboot mode\n\n"]
                     check_mode()
                     os.system(f"sh {selected_result}/{selected_file}")
                     exit()
