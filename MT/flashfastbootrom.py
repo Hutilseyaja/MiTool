@@ -25,7 +25,7 @@ def check_mode():
 
             sys.stdout.write('\r\033[K')
             sys.stdout.flush()
-            print("\nThe device is connected\n")
+            print("\ndevice is connected\n")
             return
 
 
