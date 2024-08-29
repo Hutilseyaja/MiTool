@@ -60,4 +60,4 @@ fi
 
 curl -L -s https://raw.githubusercontent.com/offici5l/MiTool/main/CHANGELOG.md | tac | awk '/^#/{exit} {print "\033[0;34m" $0 "\033[0m"}' | tac
 
-printf "\nuse command: \e[1;32mmitool\e[0m\n"
+printf "\nuse command: \e[1;32mmitool\e[0m\n\n"
