@@ -92,6 +92,7 @@ MiTool version 1.5.2 :
 
 MiTool version 1.5.3 :
 
+- fix installation for termux-adb ...
 [
 Miunlocktool version 1.5.2:
 - Fix `"device is not recognized but termux-api popup appears !"`
