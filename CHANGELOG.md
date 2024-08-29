@@ -92,7 +92,8 @@ MiTool version 1.5.2 :
 
 MiTool version 1.5.3 :
 
-- fix installation for termux-adb ...
+- Fix installation for termux-adb ...
+- Fix flashf "termux-api popup appears ! But the flashing process does not take start"
 
 [
 
