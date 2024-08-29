@@ -3,21 +3,30 @@
 import os
 
 def check_mode():
+    spinner = "|/-\\"
+    message = "\r device not connected ! "
     while True:
-        status1 = os.popen("adb get-state 2>/dev/null").read().strip()
-        if status1 == "sideload":
-            print(f"\n{status1} mode .. reboot to fastboot mode ... wait ..\n\n")
-            os.system("adb reboot bootloader")
-            continue
-        status2 = os.popen("adb get-state 2>/dev/null").read().strip()
-        if status2 == "device":
-            print(f"\n{status2} mode .. reboot to fastboot mode ... wait ..\n\n")
-            os.system("adb reboot bootloader")
-            continue
-        status3 = os.popen("fastboot devices 2>/dev/null | awk '{print $NF}'").read().strip()
-        if status3 == "fastboot":
-            print(f"\n{status1} ok\\n")
-            break
+        for char in spinner:
+            process = subprocess.Popen(['fastboot', 'devices'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            line = process.stdout.readline()
+
+            if not line and process.poll() is not None:
+                sys.stdout.write(message + char + '\r')
+                sys.stdout.flush()
+                time.sleep(0.1)
+                continue
+
+            if "No permission" in line:
+                process.terminate()
+                sys.stdout.write(message + char + '\r')
+                sys.stdout.flush()
+                time.sleep(0.1)
+                continue
+
+            sys.stdout.write('\r\033[K')
+            sys.stdout.flush()
+            print("\nThe device is connected\n")
+            return
 
 
 def translate_file_name(file_name):
@@ -47,6 +56,7 @@ def flash_selected_result(selected_result):
                     selected_file = found_files[choice - 1]
                     translated_file = translate_file_name(selected_file)
                     print("\ncheck device it is connected via OTG ! ...\n")
+                    [print(char, end='', flush=True) or time.sleep(0.01) for char in "\nEnsure you're in Bootloader mode\n\n"]
                     check_mode()
                     os.system(f"sh {selected_result}/{selected_file}")
                     exit()
