@@ -104,7 +104,15 @@ Miunlocktool version 1.5.2:
 ]
 
 
+[
 
+MiAssistantTool version 1.1
+
+- reboot (to system)
+- Display the list of options before connecting the device
+- Many fixes and improvements ...
+
+]
 
 
 
