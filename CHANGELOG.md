@@ -114,5 +114,7 @@ MiAssistantTool version 1.1
 
 ]
 
+- Add a step to verify that storage access(termux-setup-storage) is granted
+
 
 
