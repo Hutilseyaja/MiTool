@@ -125,6 +125,9 @@ This will reduce the process time by about half, and it cannot be reduced furthe
 
 - Add some messages to let the user know that the process is in progress.
 
+- Edit the encryptData save path to be in /sdcard/encryptData Instead of being in /sdcard/Download/encryptData ( this will fix the issue :
+FileNotFoundError: [Errno 2] No such file or directory: '/sdcard/Download/encryptData' )
+
 ]
 
 
