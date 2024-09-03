@@ -1,5 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+yes | pkg update && yes | pkg upgrade
+
 if ! command -v adb &>/dev/null || ! command -v fastboot &>/dev/null; then
     curl https://raw.githubusercontent.com/offici5l/termux-adb-fastboot/main/install | bash
 fi
