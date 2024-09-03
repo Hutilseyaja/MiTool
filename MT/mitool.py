@@ -2,8 +2,12 @@
 
 version = "1.5.3"
 
-import subprocess, requests, shutil, re, sys
+import subprocess, requests, shutil, re, sys, os
 from os import get_terminal_size
+
+if not os.path.isdir(os.path.expanduser('~/storage')):
+    print("\nPlease grant permission via command:\ntermux-setup-storage\n\nthen restart the tool\n")
+    exit()
 
 try:
     response = requests.get("https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py", timeout=3)
