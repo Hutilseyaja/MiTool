@@ -4,6 +4,8 @@
 
 [![Version 1.5.3](https://img.shields.io/badge/Version-1.5.3-brightgreen)](#)
 
+[CHANGELOG](https://github.com/offici5l/MiTool/blob/main/CHANGELOG.md)
+
 ### compatible with Android(Termux)
 
 [![Telegram Channel](https://img.shields.io/badge/-telegram-red?color=white&logo=telegram&logoColor=blue)](https://t.me/Offici5l_Channel)
