@@ -137,6 +137,15 @@ FileNotFoundError: [Errno 2] No such file or directory: '/sdcard/Download/encryp
 ]
 
 
+[
+
+Miunlocktool version 1.5.5:
+- Other improvements can be found at : https://github.com/offici5l/MiUnlockTool/blob/main/CHANGELOG.md
+
+]
+
+
+
 
 
 
