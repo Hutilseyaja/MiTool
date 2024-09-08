@@ -5,7 +5,7 @@ echo -e "\n\033[32mpkg update&upgrade...\033[0m"
 yes | pkg update 2> >(grep -v "WARNING: apt does not have a stable CLI interface" >&2) > /dev/null && yes | pkg upgrade 2> >(grep -v "WARNING: apt does not have a stable CLI interface" >&2) > /dev/null
 
 if ! command -v adb &>/dev/null || ! command -v fastboot &>/dev/null; then
-    curl https://raw.githubusercontent.com/offici5l/termux-adb-fastboot/main/install | bash
+    curl -s https://raw.githubusercontent.com/offici5l/termux-adb-fastboot/main/install | bash
 fi
 
 if ! command -v pv &>/dev/null; then
