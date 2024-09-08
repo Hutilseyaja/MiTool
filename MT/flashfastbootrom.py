@@ -60,6 +60,7 @@ def flash_selected_result(selected_result):
                     translated_file = translate_file_name(selected_file)
                     [print(char, end='', flush=True) or time.sleep(0.01) for char in "\nEnsure you're in Fastboot mode\n\n"]
                     check_mode()
+                    print("\nflashing process will start now...\n")
                     os.system(f"sh {selected_result}/{selected_file}")
                     exit()
                 else:
