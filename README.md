@@ -2,7 +2,7 @@
 
 <h1 style="font-size: 24px; color: #FF6719; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">MiTool</h1>
 
-[![Version 1.5.3](https://img.shields.io/badge/Version-1.5.3-brightgreen)](#)
+[![Version 1.5.4](https://img.shields.io/badge/Version-1.5.4-brightgreen)](#)
 
 [CHANGELOG](https://github.com/offici5l/MiTool/blob/main/CHANGELOG.md)
 

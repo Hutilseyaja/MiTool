@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-version = "1.5.3"
+version = "1.5.4"
 
 import subprocess, requests, shutil, re, sys, os
 from os import get_terminal_size

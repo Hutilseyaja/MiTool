@@ -1,6 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-yes | pkg update && yes | pkg upgrade
+echo -e "\n\033[32mpkg update&upgrade...\033[0m"
+
+yes | pkg update 2> >(grep -v "WARNING: apt does not have a stable CLI interface" >&2) > /dev/null && yes | pkg upgrade 2> >(grep -v "WARNING: apt does not have a stable CLI interface" >&2) > /dev/null
 
 if ! command -v adb &>/dev/null || ! command -v fastboot &>/dev/null; then
     curl https://raw.githubusercontent.com/offici5l/termux-adb-fastboot/main/install | bash
@@ -37,29 +39,29 @@ if ! dpkg -l | grep -q libusb; then
 fi
 
 echo -e "\033[32mupdate MiTool...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py" -o "$PREFIX/bin/mitool" && chmod +x "$PREFIX/bin/mitool"
+curl -s "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py" -o "$PREFIX/bin/mitool" && chmod +x "$PREFIX/bin/mitool"
 
 echo -e "\033[32mupdate MiHelp...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mihelp.py" -o "$PREFIX/bin/mihelp" && chmod +x "$PREFIX/bin/mihelp"
+curl -s "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mihelp.py" -o "$PREFIX/bin/mihelp" && chmod +x "$PREFIX/bin/mihelp"
 
 echo -e "\033[32mupdate MiFlashF...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashf.py" -o "$PREFIX/bin/miflashf" && chmod +x "$PREFIX/bin/miflashf"
+curl -s "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashf.py" -o "$PREFIX/bin/miflashf" && chmod +x "$PREFIX/bin/miflashf"
 
 echo -e "\033[32mupdate MiFlashS...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashs.py" -o "$PREFIX/bin/miflashs" && chmod +x "$PREFIX/bin/miflashs"
+curl -s "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashs.py" -o "$PREFIX/bin/miflashs" && chmod +x "$PREFIX/bin/miflashs"
 
 echo -e "\033[32mupdate MiUnlockTool...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiUnlockTool/master/MiUnlockTool.py" -o "$PREFIX/bin/miunlock" && chmod +x "$PREFIX/bin/miunlock"
+curl -s "https://raw.githubusercontent.com/offici5l/MiUnlockTool/master/MiUnlockTool.py" -o "$PREFIX/bin/miunlock" && chmod +x "$PREFIX/bin/miunlock"
 
 echo -e "\033[32mupdate MiBypassTool...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiBypassTool/master/MiBypassTool.py" -o "$PREFIX/bin/mibypass" && chmod +x "$PREFIX/bin/mibypass"
+curl -s "https://raw.githubusercontent.com/offici5l/MiBypassTool/master/MiBypassTool.py" -o "$PREFIX/bin/mibypass" && chmod +x "$PREFIX/bin/mibypass"
 
 echo -e "\033[32mupdate MiAssistantTool...\033[0m"
 if [ $(uname -m) == "aarch64" ]; then
-    curl -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_aarch64" | cut -d '"' -f 4)
+    curl -s -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_aarch64" | cut -d '"' -f 4)
     chmod +x $PREFIX/bin/miasst
 else
-    curl -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_arm" | cut -d '"' -f 4)
+    curl -s -L -o $PREFIX/bin/miasst $(curl -s "https://api.github.com/repos/offici5l/MiAssistantTool/releases/latest" | grep "browser_download_url.*miasst_termux_arm" | cut -d '"' -f 4)
     chmod +x $PREFIX/bin/miasst
 fi
 

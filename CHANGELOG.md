@@ -144,7 +144,11 @@ Miunlocktool version 1.5.5:
 
 ]
 
+#
 
+MiTool version 1.5.4 :
+
+- improvements
 
 
 
