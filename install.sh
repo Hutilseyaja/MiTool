@@ -39,11 +39,11 @@ fi
 echo -e "\033[32mupdate mitool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py" -o "$PREFIX/bin/mitool" && chmod +x "$PREFIX/bin/mitool"
 
-echo -e "\033[32mupdate flashfastbootrom...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/flashfastbootrom.py" -o "$PREFIX/bin/flashf" && chmod +x "$PREFIX/bin/flashf"
+echo -e "\033[32mupdate MiFlashF...\033[0m"
+curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashf.py" -o "$PREFIX/bin/miflashf" && chmod +x "$PREFIX/bin/miflashf"
 
-echo -e "\033[32mupdate flashwithsideloadmode...\033[0m"
-curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/flashwithsideloadmode.py" -o "$PREFIX/bin/flashz" && chmod +x "$PREFIX/bin/flashz"
+echo -e "\033[32mupdate MiFlashS...\033[0m"
+curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashs.py" -o "$PREFIX/bin/miflashs" && chmod +x "$PREFIX/bin/miflashs"
 
 echo -e "\033[32mupdate MiUnlockTool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiUnlockTool/master/MiUnlockTool.py" -o "$PREFIX/bin/miunlock" && chmod +x "$PREFIX/bin/miunlock"
