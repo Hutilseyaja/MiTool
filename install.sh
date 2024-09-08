@@ -39,6 +39,9 @@ fi
 echo -e "\033[32mupdate mitool...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mitool.py" -o "$PREFIX/bin/mitool" && chmod +x "$PREFIX/bin/mitool"
 
+echo -e "\033[32mupdate MiHelp...\033[0m"
+curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/mihelp.py" -o "$PREFIX/bin/mihelp" && chmod +x "$PREFIX/bin/mihelp"
+
 echo -e "\033[32mupdate MiFlashF...\033[0m"
 curl "https://raw.githubusercontent.com/offici5l/MiTool/master/MT/miflashf.py" -o "$PREFIX/bin/miflashf" && chmod +x "$PREFIX/bin/miflashf"
 
