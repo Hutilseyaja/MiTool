@@ -1,55 +1,55 @@
 #!/usr/bin/python
 
-c1="\033[1;32m"
-c2="\033[0m"
-_l =  c1 + "_"*56 + c2 + "\n"
+RESET="\033[0m"
+GREEN="\033[1;32m"
+LINE = f"{GREEN}{'_'*56}{RESET}\n"
 
 print("\033[H\033[J")
 print(f"""
-{_l}
+{LINE}
 Lock Bootloader:
 
-notice: Prior to initiating the process, ensure that the partitions is clean ( If you've previously rooted your device, flash the clean boot.img Or If any modifications have been made to any partition, flash the clean partition-name.img ) to prevent any potential issues in the future
+notice: Prior to initiating the process, ensure that the partitions are clean (If you've previously rooted your device, flash the clean boot.img or if any modifications have been made to any partition, flash the clean partition-name.img) to prevent any potential issues in the future.
 
-Type: {c1}fastboot oem lock{c2}
-{_l}
+Type: {GREEN}fastboot oem lock{RESET}
+{LINE}
 Flash Custom Recovery:
 
-Type: {c1}fastboot flash recovery /path/name.img{c2}
+Type: {GREEN}fastboot flash recovery /path/name.img{RESET}
 
 Example:
 fastboot flash recovery /sdcard/download/recovery.img
-{_l}
+{LINE}
 Flash Root:
 1. Download and install Magisk app
 2. Open Magisk app, press Install in the Magisk card
 3. Choose 'Select and Patch a File', select boot.img
-   (Note: Choose boot.img for device you want to root)
+   (Note: Choose boot.img for the device you want to root)
 
-Type: {c1}fastboot flash boot /path/name.img{c2}
+Type: {GREEN}fastboot flash boot /path/name.img{RESET}
 
 Example: fastboot flash boot /sdcard/download/boot.img
-{_l}
-Flash Specific Partitions
-('recovery', 'boot', 'vbmeta', 'vbmeta_system', 'metadata', 'dtbo', 'cust', 'super', 'userdata', ...):
+{LINE}
+Flash Specific Partitions:
+('recovery', 'boot', 'vbmeta', 'vbmeta_system', 'metadata', 'dtbo', 'cust', 'super', 'userdata', ...)
 
 Type:
-{c1}fastboot flash PatitionName /path/FilePartitionName{c2}
+{GREEN}fastboot flash PatitionName /path/FilePartitionName{RESET}
 
 Example:
 fastboot flash super /sdcard/download/super.img
-{_l}
+{LINE}
 For more fastboot and adb commands:
 
-Type: {c1}fastboot help{c2} or {c1}adb help{c2}
-{_l}
+Type: {GREEN}fastboot help{RESET} or {GREEN}adb help{RESET}
+{LINE}
 For updating MiTool:
 
-Type: {c1}u{c2}
-{_l}
+Type: {GREEN}u{RESET}
+{LINE}
 To report issues or share feedback, visit:
 
 - GitHub Issues: github.com/offici5l/MiTool/issues
 - Telegram Group: t.me/Offici5l_Group
-{_l}
+{LINE}
 """)

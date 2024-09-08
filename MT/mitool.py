@@ -71,13 +71,13 @@ elif choice == "3":
     subprocess.run("$PREFIX/bin/flashz", shell=True)
 elif choice == "4":
     subprocess.run("$PREFIX/bin/mibypass", shell=True)
+elif choice == "5":
+    subprocess.run("$PREFIX/bin/miasst", shell=True)
+elif choice == "h" or choice == "help":
+    subprocess.run("$PREFIX/bin/mihelp", shell=True)
 elif choice == "u":
     subprocess.run("curl https://raw.githubusercontent.com/offici5l/MiTool/master/install.sh | bash", shell=True)
     exit()
-elif choice == "h" or choice == "help":
-    subprocess.run("$PREFIX/bin/mihelp", shell=True)
-elif choice == "5":
-    subprocess.run("$PREFIX/bin/miasst", shell=True)
 else:
     print("\nInvalid choice\n")
     exit()
